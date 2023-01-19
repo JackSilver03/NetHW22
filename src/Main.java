@@ -1,20 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        int a; // Начальный счёт клиента//
-        int b; // Сумма пополнения//
-        int c; // Сумма начисляемых бонусов//
+        int balance; // Остаток на счёте//
+        int refill; // Сумма пополнения//
+        int bonus; // Сумма начисляемых бонусов//
 
-        a= 243;
-        b= 1900;
+        balance = 243;
+        refill = 1900;
 
-        if (b>1000) {
-            c=b/100;
-            a=a+b+c;}
-        else {
-            a = a + b;
-            c = 0;
+        if (refill > 1000) {
+            bonus = refill / 100;
+            balance = balance + refill + bonus;
+        } else {
+            balance = balance + refill;
+            bonus = 0;
         }
-        System.out.println("Зачислено на счёт " + b + "; Также начислено бонусов " + c + "; Итоговая сумма составляет "+a);
+        System.out.println("Зачислено на счёт " + refill + "; Также начислено бонусов " + bonus + "; Итоговая сумма составляет " + balance);
 
     }
 }
